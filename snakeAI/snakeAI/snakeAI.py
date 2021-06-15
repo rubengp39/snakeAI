@@ -74,7 +74,7 @@ class SnakeGameAI:
 		#gameOver
 		reward = 0
 		gameOver = False
-		if self._is_collision() or self.iteration > 80*len(self.snake):
+		if self.is_collision() or self.iteration > 80*len(self.snake):
 			gameOver = True
 			reward = -10
 			return reward, gameOver, self.score
@@ -95,7 +95,7 @@ class SnakeGameAI:
 		return reward, gameOver, self.score
 
 	
-	def _is_collision(self, pt=None):
+	def is_collision(self, pt=None):
 
 		if pt is None:
 			pt = self.head
