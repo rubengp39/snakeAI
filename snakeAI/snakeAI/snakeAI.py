@@ -27,7 +27,7 @@ YELLOW = (255, 255, 0)
 
 
 BLOCK_SIZE = 20
-SPEED = 20
+SPEED = 100
 
 class SnakeGameAI:
 

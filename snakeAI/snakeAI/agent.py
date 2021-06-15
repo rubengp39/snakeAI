@@ -8,7 +8,7 @@ from helper import plot
 
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
-LR = 0.001
+LR = 0.01
 
 class Agent:
 
@@ -85,7 +85,7 @@ class Agent:
 		self.trainer.train_step(state, action, reward, next_state, done)
 
 	def get_action(self, state):
-		self.epsilon = 100 - self.n_games
+		self.epsilon = 50 - self.n_games
 		final_move = [0,0,0]
 		if random.randint(0,200) < self.epsilon:
 			move = random.randint(0,2)
